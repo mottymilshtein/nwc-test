@@ -1,5 +1,8 @@
 const a = (x,y,z) => {
-    const res = x + y + z
+    const res = {
+        a:[x,y],
+        c:z
+    }
 
     return res
 }
@@ -15,7 +18,7 @@ const c = function(x,y,z) {
 function d (x,y,z) {
     const res = x + y + z
 
-    return res
+    return !!res
 }
 
 function e (...args) {
@@ -62,7 +65,23 @@ const onDescribe = () =>({
                     isRequired: false,
                         type: 'string'
                 }
+            },
+            output:{
+                type: 'object',
+                properties:{
+                    a:{
+                        type: 'array',
+                        items: {
+                            type: 'string'
+                        }
+                    },
+                    c:{
+                        type: 'string',
+                        format: 'email'
+                    }
+                }
             }
+
         },
         ['b']:{
             parameters: {
@@ -72,6 +91,9 @@ const onDescribe = () =>({
                         format: 'email',
                         defaultValue: 'test@mail.com'
                 }
+            },
+            output:{
+                type: 'string'
             }
         },
         ['c']:{
@@ -92,13 +114,16 @@ const onDescribe = () =>({
                     isRequired: false,
                         type: 'string'
                 }
+            },
+            output:{
+                type: 'string'
             }
         },
         ['d']:{
             parameters: {
                 ['x']: {
                     isRequired: true,
-                        type: 'int',
+                        type: 'integer',
                         format: 'email',
                         defaultValue: 'test@mail.com'
                 },
@@ -112,13 +137,16 @@ const onDescribe = () =>({
                     isRequired: false,
                         type: 'string'
                 }
+            },
+            output:{
+                type: 'boolean'
             }
         },
         ['e']:{
             parameters: {
                 ['x']: {
                     isRequired: true,
-                        type: 'int',
+                        type: 'integer',
                         format: 'email',
                         defaultValue: 'test@mail.com'
                 },
@@ -132,13 +160,16 @@ const onDescribe = () =>({
                     isRequired: false,
                         type: 'string'
                 }
+            },
+            output:{
+                type: 'integer'
             }
         },
         ['f']:{
             parameters: {
                 ['x']: {
                     isRequired: true,
-                        type: 'int',
+                        type: 'integer',
                         format: 'email',
                         defaultValue: 'test@mail.com'
                 },
@@ -152,23 +183,29 @@ const onDescribe = () =>({
                     isRequired: false,
                         type: 'string'
                 }
+            },
+            output:{
+                type: 'string'
             }
         },
         ['g']:{
             parameters: {
                 ['x']: {
                     isRequired: true,
-                        type: 'int',
+                        type: 'integer',
                         format: 'email',
                         defaultValue: 'test@mail.com'
                 }
+            },
+            output:{
+                type: 'integer'
             }
         },
         ['h']:{
             parameters: {
                 ['x']: {
                     isRequired: true,
-                        type: 'int',
+                        type: 'integer',
                         format: 'email',
                         defaultValue: 'test@mail.com'
                 },
@@ -182,13 +219,16 @@ const onDescribe = () =>({
                     isRequired: false,
                         type: 'string'
                 }
+            },
+            output:{
+                type:'string'
             }
         },
         ['i']:{
             parameters: {
                 ['x']: {
                     isRequired: true,
-                        type: 'int',
+                        type: 'integer',
                         format: 'email',
                         defaultValue: 'test@mail.com'
                 },
@@ -202,8 +242,12 @@ const onDescribe = () =>({
                     isRequired: false,
                         type: 'string'
                 }
+            },
+            output:{
+                type:'string'
             }
         }
+
     }
 } )
 
