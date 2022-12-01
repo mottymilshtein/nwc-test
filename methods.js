@@ -1,55 +1,222 @@
-const func1 = (x,y,z = '1') => {
+const a = (x,y,z) => {
     const res = x + y + z
 
     return res
 }
 
-const func2 = x => x
+const b = x => x
 
-const func3 = function(x,y,z = '1') {
+const c = function(x,y,z) {
     const res = x + y + z
 
     return res
 }
 
-function func4 (x,y,z = '1') {
+function d (x,y,z) {
     const res = x + y + z
 
     return res
 }
 
-function func5 (...args) {
+function e (...args) {
     return args.length
 }
 
-const func6 = async (x,y,z = '1') => {
+const f = async (x,y,z) => {
     const res = x + y + z
 
     return res
 }
 
-const func7 = async x => x
+const g = async x => x
 
-const func8 = async function (x,y,z = '1') {
+const h = async function (x,y,z) {
     const res = x + y + z
 
     return res
 }
 
-async function func9 (x,y,z = '1') {
+async function i (x,y,z) {
     const res = x + y + z
 
     return res
 }
+
+const onDescribe = () =>({
+    methods: {
+        ['a']:{
+            parameters: {
+                ['x']: {
+                    isRequired: true,
+                        type: 'string',
+                        format: 'email',
+                        defaultValue: 'test@mail.com'
+                },
+                ['y']: {
+                    isRequired: false,
+                        type: 'string',
+                        format: 'uuid',
+                        defaultValue: 'adasd-dsadasdads-vcxvx'
+                },
+                ['z']:{
+                    isRequired: false,
+                        type: 'string'
+                }
+            }
+        },
+        ['b']:{
+            parameters: {
+                ['x']: {
+                    isRequired: true,
+                        type: 'string',
+                        format: 'email',
+                        defaultValue: 'test@mail.com'
+                }
+            }
+        },
+        ['c']:{
+            parameters: {
+                ['x']: {
+                    isRequired: true,
+                        type: 'string',
+                        format: 'email',
+                        defaultValue: 'test@mail.com'
+                },
+                ['y']: {
+                    isRequired: false,
+                        type: 'string',
+                        format: 'uuid',
+                        defaultValue: 'adasd-dsadasdads-vcxvx'
+                },
+                ['z']:{
+                    isRequired: false,
+                        type: 'string'
+                }
+            }
+        },
+        ['d']:{
+            parameters: {
+                ['x']: {
+                    isRequired: true,
+                        type: 'int',
+                        format: 'email',
+                        defaultValue: 'test@mail.com'
+                },
+                ['y']: {
+                    isRequired: false,
+                        type: 'string',
+                        format: 'uuid',
+                        defaultValue: 'adasd-dsadasdads-vcxvx'
+                },
+                ['z']:{
+                    isRequired: false,
+                        type: 'string'
+                }
+            }
+        },
+        ['e']:{
+            parameters: {
+                ['x']: {
+                    isRequired: true,
+                        type: 'int',
+                        format: 'email',
+                        defaultValue: 'test@mail.com'
+                },
+                ['y']: {
+                    isRequired: false,
+                        type: 'string',
+                        format: 'uuid',
+                        defaultValue: 'adasd-dsadasdads-vcxvx'
+                },
+                ['z']:{
+                    isRequired: false,
+                        type: 'string'
+                }
+            }
+        },
+        ['f']:{
+            parameters: {
+                ['x']: {
+                    isRequired: true,
+                        type: 'int',
+                        format: 'email',
+                        defaultValue: 'test@mail.com'
+                },
+                ['y']: {
+                    isRequired: false,
+                        type: 'string',
+                        format: 'uuid',
+                        defaultValue: 'adasd-dsadasdads-vcxvx'
+                },
+                ['z']:{
+                    isRequired: false,
+                        type: 'string'
+                }
+            }
+        },
+        ['g']:{
+            parameters: {
+                ['x']: {
+                    isRequired: true,
+                        type: 'int',
+                        format: 'email',
+                        defaultValue: 'test@mail.com'
+                }
+            }
+        },
+        ['h']:{
+            parameters: {
+                ['x']: {
+                    isRequired: true,
+                        type: 'int',
+                        format: 'email',
+                        defaultValue: 'test@mail.com'
+                },
+                ['y']: {
+                    isRequired: false,
+                        type: 'string',
+                        format: 'uuid',
+                        defaultValue: 'adasd-dsadasdads-vcxvx'
+                },
+                ['z']:{
+                    isRequired: false,
+                        type: 'string'
+                }
+            }
+        },
+        ['i']:{
+            parameters: {
+                ['x']: {
+                    isRequired: true,
+                        type: 'int',
+                        format: 'email',
+                        defaultValue: 'test@mail.com'
+                },
+                ['y']: {
+                    isRequired: false,
+                        type: 'string',
+                        format: 'uuid',
+                        defaultValue: 'adasd-dsadasdads-vcxvx'
+                },
+                ['z']:{
+                    isRequired: false,
+                        type: 'string'
+                }
+            }
+        }
+    }
+} )
+
 
 module.exports = {
-    func1,
-    func2,
-    func3,
-    func4,
-    func5,
-    func6,
-    func7,
-    func8,
-    func9
+    a,
+    b,
+    c,
+    d,
+    e,
+    f,
+    g,
+    h,
+    i,
+    onDescribe
 }
